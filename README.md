@@ -15,6 +15,7 @@ cd cntf
 tar -xzvf demo_data.tar.gz
 python train.py demo_data/
 ```
+A folder `./results/cntf_hitf/` will be automatically created and the results will be saved there.
 
 ## Citation
 If you find the paper or the implementation helpful, please cite the following paper:
