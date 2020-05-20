@@ -2,6 +2,11 @@
 
 This repo contains the PyTorch implementation of the paper `Learning Phenotypes and Dynamic Patient Representations via RNN Regularized Collective Non-negative Tensor Factorization` in AAAI-19. [[paper]](https://aaai.org/ojs/index.php/AAAI/article/view/3920) [[dataset]](https://mimic.physionet.org/)
 
+## Requirements
+The codes have been tested with the following packages:
+- Python 3.6  
+- PyTorch 0.4.1  
+
 ## Quick Demo
 To run the model with a quick demo data, simply clone the repo and decompress the data archive by executing the following commands:
 ```bash
