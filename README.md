@@ -42,5 +42,6 @@ If you find the paper or the implementation helpful, please cite the following p
 ```
 
 ## Contact
-For relevant enquires, please contact Mr. Kejing Yin by email: cskjyin [AT] comp [DOT] hkbu.edu.hk
+For relevant enquires, please contact Mr. Kejing Yin by email: cskjyin [AT] comp [DOT] hkbu.edu.hk  
+
 [home page](https://kejing.me)
