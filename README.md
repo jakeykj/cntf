@@ -4,7 +4,7 @@ This repo contains the PyTorch implementation of the paper `Learning Phenotypes 
 
 ## Requirements
 The codes have been tested with the following packages:
-- Python 3.6  
+- Python 3.7   
 - PyTorch 0.4.1  
 
 ## Quick Demo
