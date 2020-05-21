@@ -17,6 +17,17 @@ python train.py demo_data/
 ```
 A folder `./results/cntf_hitf/` will be automatically created and the results will be saved there.
 
+## Data Format and Organization
+The data are stored in two seperate files contained in a folder (we refer to its path by `<DATA_PATH>`): `<DATA_PATH>/data.pkl` and `<DATA_PATH>/list.pkl`. They should be saved using the `pickle` package in Python, and the format of the two files are described as follows:
+- **`data.pkl`**: contains a list of the temporal sparse tensor, one for each patient. It is a python list of dictionary with six keys. `subs` is a `torch.LongTensor` object containing the subscripts of the non-zero elements of the tensor (for a 3rd-order tensor, its size should be 3-by-K, where K is the number of non-zero elements). `vals` is a `torch.FloatTensor` object containing the values of the tensor that are corresponding to the non-zero subscripts (size: K). `size` is a `torch.Size` object describing the size of the temporal sparse tensor. `hadm_id` is the unique ID of the patient (a python interger). `dx_vector` is a `torch.FloatTensor` object containing the one-hot vector of the diagnoses of the patient. `rx_vector` is a `torch.FloatTensor` object containing the counting vector of the medications of the patient.
+- **`list.pkl`**: contains the temporal length and label information of the patient. It is a python list of nested python lists, one for each patient. The format is: `[[<hadm_id>, <temporal_length>, <label>], ...]`.  
+
+If you use other datasets, you can organize the input data in the same format described above, and pass the `<DATA_PATH>` as a parameter to the training script:
+```bash
+python train.py <DATA_PATH>
+```
+
+
 ## Citation
 If you find the paper or the implementation helpful, please cite the following paper:
 ```bib
